@@ -82,7 +82,7 @@ Con este comando se visualizara la tabla de postgres donde se guardan los datos:
 
 Paso 4: 
 
-Abrir superset, y visualizar el dashboard en el navegador con la siguiente url: http://localhost:8088/superset/dashboard/1/. En el dashboard se podra observar un line chart con el precio de eth
+Abrir superset, y visualizar el dashboard en el navegador con la siguiente url: http://localhost:8088/superset/dashboard/1/. En el dashboard se podra observar un line chart con el precio de eth.
 
 ![](./images/superset.jpg)
 
