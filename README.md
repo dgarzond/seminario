@@ -38,7 +38,7 @@ python eth_prices.py
 ```
 En la terminal se observara que se empezaran a escribir los siguientes campos
 
-![](./images/etl-price.png)
+![](./images/etl-prices.png)
 
 Este script busca los precios de ETH y luego se lo transfiere a kafka. Para ver como se estan transfiriendo los datos kafka correr los siguiente
 
