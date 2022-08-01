@@ -51,7 +51,7 @@ docker run --rm --network=wksp_default edenhill/kafkacat:1.6.0 -q \
 
 Paso 3:
 
-Para capturar los datos streameados en kafka y trasladarlo a una base de datos de posgres, se ejecuta el siguiente comando 
+Para capturar los datos streameados en kafka y trasladarlos a una base de datos de posgres, se ejecuta el siguiente comando 
 
 ```
 docker exec -it worker1 bash 
@@ -66,6 +66,8 @@ total-executor-cores 1 \
 etl_stream_eth.py
 ```
 
-Para capturar los datos streameados en kafka y trasladarlo a una base de datos de posgres, se ejecuta el siguiente comando  
+Paso 4: 
+
+Abrir superset, y visualizar el dashboard en el navegador con la siguiente url: http://localhost:8088/superset/dashboard/1/
 
 
