@@ -84,4 +84,6 @@ Paso 4:
 
 Abrir superset, y visualizar el dashboard en el navegador con la siguiente url: http://localhost:8088/superset/dashboard/1/. En el dashboard se podra observar un line chart con el precio de eth
 
+![](./images/superset.jpg)
+
 
