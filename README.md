@@ -14,3 +14,8 @@ Seminario Especialización en ciencia de datos
 Paso 1:
 
 Clonar el repositorio con el siguiente comando
+
+
+```
+
+```
