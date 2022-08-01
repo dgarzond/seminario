@@ -38,7 +38,7 @@ python eth_prices.py
 ```
 En la terminal se observara que se empezaran a escribir los siguientes campos
 
-![](images/eth-prices.png)
+![](./images/eth_prices.jpg)
 
 Este script busca los precios de ETH y luego se lo transfiere a kafka. Para ver como se estan transfiriendo los datos kafka correr los siguiente
 
@@ -48,6 +48,9 @@ docker run --rm --network=wksp_default edenhill/kafkacat:1.6.0 -q \
     -C -t crypto -p0 \
     -f 'Partition: %p | Offset: %o | Timestamp: %T | Value: %s\n' 
 ```
+
+En la terminal se observara como se estan guardando los campos en kafka:
+![](./images/kafka.jpg)
 
 Paso 3:
 
@@ -65,9 +68,22 @@ jars /app/postgresql-42.1.4.jar \
 total-executor-cores 1 \
 etl_stream_eth.py
 ```
+Si se ejecuta le siguiente comando se puede observar como se van guardando los campos en la base de datos:
+
+```
+ ./control-env.sh psql
+ 
+ #Esto nos abrira un debian donde podemos ejectura posgres en la terminal. 
+ 
+ select * from crypto order by 1 desc;
+```
+Con este comando se visualizara la tabla de postgres donde se guardan los datos:
+![](./images/postgres.jpg)
 
 Paso 4: 
 
-Abrir superset, y visualizar el dashboard en el navegador con la siguiente url: http://localhost:8088/superset/dashboard/1/
+Abrir superset, y visualizar el dashboard en el navegador con la siguiente url: http://localhost:8088/superset/dashboard/1/. En el dashboard se podra observar un line chart con el precio de eth.
+
+![](./images/superset.jpg)
 
 
